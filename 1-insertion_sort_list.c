@@ -1,4 +1,5 @@
 #include "sort.h"
+#include "print_list.c"
 
 /**
  * insertion_sort_list - Sorts a doubly linked list of integers in ascending order
@@ -41,29 +42,4 @@ void insertion_sort_list(listint_t **list)
         current = next_node;
     }
     *list = sorted;
-}
-
-#include "sort.h"
-#include <stdio.h>
-
-
-/**
- * print_list - Prints a list of integers
- *
- * @list: The list to be printed
- */
-void print_list(const listint_t *list)
-{
-    int i;
-
-    i = 0;
-    while (list)
-    {
-        if (i > 0)
-            printf(", ");
-        printf("%d", list->n);
-        ++i;
-        list = list->next;
-    }
-    printf("\n");
 }
