@@ -1,27 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "sort.h"
 
-int main()
+/**
+ * main - Entry point
+ *
+ * Return: Always 0
+ */
+int main(void)
 {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    size_t n = sizeof(arr) / sizeof(arr[0]);
+	int array[] = {19, 48, 99, 71, 13, 52, 96, 73, 86, 7};
+	size_t n = sizeof(array) / sizeof(array[0]);
 
-    printf("Original Array: ");
-    size_t i;
-    for (i = 0; i < n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n\n");
-
-    bubble_sort(arr, n);
-
-    printf("\nSorted Array: ");
-    for (i = 0; i < n; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    printf("\n");
-
-    return 0;
+	print_array(array, n);
+	printf("\n");
+	bubble_sort(array, n);
+	printf("\n");
+	print_array(array, n);
+	return (0);
 }
