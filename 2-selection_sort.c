@@ -1,10 +1,11 @@
 #include "sort.h"
 void selection_sort(int *array, size_t size)
 {
+    size_t i, j;
+
     if (array == NULL || size < 2)
         return;
 
-    size_t i, j;
     for (i = 0; i < size - 1; i++)
     {
         size_t min_index = i;
